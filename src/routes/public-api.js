@@ -8,7 +8,7 @@ const publicRouter = new express.Router();
 
 publicRouter.post('/api/users', userController.register);
 publicRouter.post('/api/users/login', userController.login);
-publicRouter.post('/api/users/:userId', userController.get);
+publicRouter.get('/api/users/me', userController.get);
 
 publicRouter.post('/api/merchants', merchantController.register);
 publicRouter.post('/api/merchants/login', merchantController.login);
